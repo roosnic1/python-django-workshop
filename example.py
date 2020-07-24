@@ -1,6 +1,6 @@
 import csv
-#import matplotlib.pyplot as plt
-#import cowsay
+import matplotlib.pyplot as plt
+import cowsay
 
 
 ALL_THE_ANIMALS = ['🐈', '🐕', '🐘', '🐙', '🦓', '🐅']
@@ -18,8 +18,9 @@ def hello_variable(name = 'Zürich'):
 	print('Hello %s' % name)
 
 def print_animals(animals):
-	for index, animal in enumerate(animals, start = 1):
-		print('The animal at position {} is a {}'.format(index, animal))
+	#for index, animal in enumerate(animals):
+	for animal in animals:
+		print('The animal at position {} is a {}'.format('0', animal))
 
 def print_range(start = 0, stop = 10, step = 2):
 	for i in range(start, stop, step):
@@ -76,14 +77,14 @@ def print_tuples():
 	print(TUP_NUM)
 
 def edit_tuples():
-	#try:
-	LIST_NUM[2] = 5
-	print(LIST_NUM)
+	try:
+		LIST_NUM[2] = 5
+		print(LIST_NUM)
 
-	TUP_NUM[2] = 5
-	print(TUP_NUM)
-	#except TypeError as error:
-	#	print('Catched TypeError', error)
+		TUP_NUM[2] = 5
+		print(TUP_NUM)
+	except TypeError as error:
+		print('Catched TypeError', error)
 
 
 def why_tuples():
@@ -119,7 +120,7 @@ def deaths_in_zh_per_quartier(year1, year2, year3):
 			elif int(row['Jahr']) == year3:
 				quarts[2].append(row['QuarLang'])
 				deaths[2].append(int(row['AnzSterWir']))
-	print(quarts, deaths)
+	#print(quarts, deaths)
 
 	fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
 	axs[0].bar(quarts[0], deaths[0])
@@ -132,17 +133,17 @@ def deaths_in_zh_per_quartier(year1, year2, year3):
 
 
 if __name__ == '__main__':
-    print_hello()
+    #print_hello()
     #print_range(0, 100, 10)
     #print_animals(ALL_THE_ANIMALS)
     #print_humans()
     #print_tuples()
     #edit_tuples()
     #why_tuples()
-    #divide(7)
+    #divide(0)
     #print('Is 🐈 in ALL_THE_ANIMALS? {}'.format('🐈' in ALL_THE_ANIMALS))
     #print('Is 🐄 in ALL_THE_ANIMALS? {}'.format('🐄' in ALL_THE_ANIMALS))
 
     #deaths_in_zh_per_quartier(1993, 2000, 2019)
-    #cowsay.dragon("Hello")
+    cowsay.dragon("Hello")
     
