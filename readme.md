@@ -3,6 +3,7 @@
 [Presentation](https://docs.google.com/presentation/d/1Ajh-sdFcTWu0pmPWEP3PohCnFd5iyIXWDjG8e3JS0_k/edit?usp=sharing)
 
 ## Setup Django Project
+1. Clone this github repository
 1. Create or activate pyenv virtualenv `pyenv activate workshop`
 1. Cd into the techface directory `cd techface`
 1. Install all the python requirements `pip install -r requirements.txt`
